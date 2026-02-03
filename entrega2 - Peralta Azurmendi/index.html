@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preentrega - 2 - ultima mod 28/1/26</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+
+
+    <div class="contenedor">
+
+        <!-- SECCION DE TAREAS -->
+        <div class="titulo">
+            <H1>Daily Companion</H1>
+        </div>
+        <div class="subtitulo">
+            <h4>Agregar Tareas</h4>
+        </div>
+        <div id="contenedor_tareas">
+            <form class="form" id="formulario_tareas">
+                <input id="tarea" type="text" placeholder="Ingrese la tarea">
+                <input id="fecha" type="date">
+                <select name="Estado" id="estado">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Completa">Completa</option>
+                </select>
+                <input class="estilo_boton" type="submit" value="Agregar tarea">
+            </form>
+        </div>
+        <div class="subtitulo">
+            <h4>Tareas Agregadas</h4>
+        </div>
+        <div id="tareas_agregadas">
+            <ul id="lista_tareas"></ul>
+        </div>
+
+        <!-- SECCION DE GASTOS -->
+        <div class="subtitulo">
+            <h4>Gastos</h4>
+        </div>
+        <div id="contenedor_gastos">
+            <form class="form" id="formulario_gastos">
+                <input id="gasto" type="text" placeholder="Ingrese el item">
+                <input id="monto" type="number" placeholder="Monto">
+                <input id="fecha_compra" type="date">
+                <input class="estilo_boton" type="submit" value="Agregar gasto">
+            </form>
+        </div>
+        <div class="subtitulo">
+            <h4>Listado de Gastos</h4>
+        </div>
+        <div id="gastos_agregados">
+            <ul id="lista_gastos"></ul>
+        </div>
+
+
+        <!-- SECCION BALANCE -->
+        <div class="subtitulo">
+            <h4>Balance</h4>
+        </div>
+        <div id="contenedor_balance">
+            <span id="balance">-</span>
+        </div>
+        <div id="ingreso">
+            <form id="formulario_ingreso">
+                <input id="depositado" type="number" placeholder="Monto a depositar">
+                <input class="estilo_boton" type="submit" value="Depositar">
+            </form>
+        </div>
+        <div id="egreso">
+            <form id="formulario_egreso">
+                <input id="retirado" type="number" placeholder="Monto a retirar">
+                <input class="estilo_boton" type="submit" value="Retirar">
+            </form>
+        </div>
+        <div class="subtitulo">
+            <h4>Movimientos</h4>
+        </div>
+        <div id="mov">
+            <ol id="movimientos"></ol>
+        </div>
+        
+
+    </div>
+
+
+
+
+    <script src="./entrega2.js"></script>
+</body>
+
+</html>
