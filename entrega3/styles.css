@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifS;
+    background-color: #dfdddd
+}
+
+h1 {
+    margin: 10px;
+}
+
+h4 {
+    margin: 3px;
+}
+
+.estilo_boton{
+    font-weight: 600;
+
+}
+
+.estilo_boton:hover{
+    background-color: #a2a2a2;
+}
+
+
+.contenedor{
+margin:auto;
+margin-top: 30px;
+margin-bottom: 30px;
+width: 60vw;
+background-color: #fff3b0;
+padding: 10px 20px;
+border-radius: 15px;
+box-shadow: 0 0 10px 0;
+}
+
+.titulo{
+text-align: center;
+color: rgb(253, 253, 253);
+background-color: #9e2a2b;
+border: 1px solid rgba(0, 0, 0, 0.14);
+border-radius: 15px;
+margin-bottom: 10px;
+box-shadow: 0 0 5px 0 black;
+}
+
+#cerrar_sesion {
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#contenedor_tareas {
+text-align: justify;
+border: 1px solid rgba(0, 0, 0, 0);
+padding: 10px 20px;
+border-radius: 15px;
+background-color: rgb(175, 215, 202);
+font-display: inherit;
+box-shadow: 0 0 5px 0;
+}
+#contenedor_gastos {
+    color: #233D4D;
+    text-align: justify;
+    border: 1px solid rgba(0, 0, 0, 0.232);
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgb(175, 215, 202);
+    font-display: inherit;
+    
+box-shadow: 0 0 5px 0;
+}
+
+.subtitulo {
+    text-align: center;
+    width: 35%;
+    color: rgb(232, 231, 231);
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    margin: 10px 10px;
+    padding: 1px;
+    padding-left: 10px;
+    border-radius: 15px;
+    background-color: #335c67;
+    box-shadow: 0 0 5px 0 black;
+}
+
+#contenedor_gastos{
+    background-color: rgb(175, 215, 202);
+    text-align: justify;
+    border: 1px solid rgba(0, 0, 0, 0.319);
+    border-radius: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 0;
+}
+
+
+
+
+#tareas_agregadas {
+text-align: justify;
+border: 1px solid rgba(0, 0, 0, 0.232);
+padding: 10px 20px;
+border-radius: 15px;
+background-color: #e09f3d;
+font-display: inherit;
+box-shadow: 0 0 5px 0 black;
+}
+
+
+li {
+    list-style: decimal;
+    color: #240e01;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+input, select {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+#gastos_agregados {
+color: #233D4D;
+text-align: justify;
+border: 1px solid rgba(0, 0, 0, 0.232);
+padding: 10px 20px;
+border-radius: 15px;
+background-color: #e09f3d;
+font-display: inherit;
+box-shadow: 0 0 5px 0 black;
+}
+#contenedor_balance {
+justify-self: center;
+width: 50%;
+color: #0c0c0c;
+text-align:center;
+font-weight: 600;
+border: 1px solid rgba(0, 0, 0, 0.232);
+padding: 10px 20px;
+border-radius: 15px;
+background-color: rgb(252, 252, 252);
+font-display: inherit;
+box-shadow: 0 0 5px 0 black;
+}
+
+#egreso, #ingreso{
+margin: 5px;
+color: #233D4D;
+text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.232);
+padding: 10px 20px;
+border-radius: 15px;
+background-color: rgb(175, 215, 202);
+font-display: inherit;
+box-shadow: 0 0 5px 0;
+}
+
+#mov {
+color: #233D4D;
+text-align: justify;
+border: 1px solid rgba(0, 0, 0, 0.232);
+padding: 10px 20px;
+border-radius: 15px;
+font-display: inherit;
+background-color: #e09f3e;
+box-shadow: 0 0 5px 0 black;
+}
