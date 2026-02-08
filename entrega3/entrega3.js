@@ -1,12 +1,18 @@
-// LOGIN - Solo en signIn.html
+// LOGIN - Solo en index.html
 const formularioLogIn = document.querySelector('#formulario');
 if (formularioLogIn) {
   const user_name = document.querySelector('#username');
   const contraseña = document.querySelector('#password');
 
+ 
+  
+  //crear login
+  const user = "rperalta07";
+  const passwd = "rodrigo123456"
+
   formularioLogIn.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (user_name.value === "rperalta07" && contraseña.value === "123456") {
+    if (user_name.value === user && contraseña.value === passwd) {
       window.location.href = 'main.html'; 
     } else {
       alert("Ingrese un Usuario y/o Contraseña validos");
