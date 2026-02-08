@@ -14,6 +14,8 @@ if (formularioLogIn) {
   });
 }
 
+// agregado de logout
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // Botón cerrar sesión
