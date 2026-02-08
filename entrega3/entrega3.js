@@ -7,7 +7,7 @@ if (formularioLogIn) {
   formularioLogIn.addEventListener('submit', (event) => {
     event.preventDefault();
     if (user_name.value === "rperalta07" && contraseña.value === "123456") {
-      window.location.href = 'index.html'; 
+      window.location.href = 'main.html'; 
     } else {
       alert("Ingrese un Usuario y/o Contraseña validos");
     }
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCerrarSesion = document.querySelector('#cerrar_sesion');
   if (btnCerrarSesion) {
     btnCerrarSesion.addEventListener('click', () => {
-      window.location.href = 'signIn.html';
+      window.location.href = 'index.html';
     });
   }
 
