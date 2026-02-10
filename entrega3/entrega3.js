@@ -8,7 +8,7 @@ if (formularioLogIn) {
 
   //crear login
   const user = "rperalta07";
-  const passwd = "rodrigo123456"
+  const passwd = "rperalta07"
 
   formularioLogIn.addEventListener('submit', (event) => {
     event.preventDefault();
