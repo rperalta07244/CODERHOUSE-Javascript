@@ -4,8 +4,8 @@ if (formularioLogIn) {
   const user_name = document.querySelector('#username');
   const contraseña = document.querySelector('#password');
 
- 
-  
+
+
   //crear login
   const user = "rperalta07";
   const passwd = "rodrigo123456"
@@ -13,7 +13,7 @@ if (formularioLogIn) {
   formularioLogIn.addEventListener('submit', (event) => {
     event.preventDefault();
     if (user_name.value === user && contraseña.value === passwd) {
-      window.location.href = 'main.html'; 
+      window.location.href = 'main.html';
     } else {
       alert("Ingrese un Usuario y/o Contraseña validos");
     }
@@ -75,29 +75,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const nuevoElemento = document.createElement("li");
       nuevoElemento.textContent =
         tareaObj.tarea + " -- Fecha: " + tareaObj.fecha + " -- Estado: " + tareaObj.estado;
-  //--------------------------------------------------------------------////
+      //--------------------------------------------------------------------////
       // Crear botón de borrar
       const botonBorrar = document.createElement("button");
       botonBorrar.textContent = "Borrar";
       botonBorrar.style.marginLeft = "10px";
       botonBorrar.style.borderRadius = "15px";
+      botonBorrar.style.padding = "5px 10px";
       botonBorrar.onclick = () => {
         arrayDeTareas.splice(index, 1);
         saveTareas();
         renderTareas();
       };
-  //--------------------------------------------------------------------////
+      //--------------------------------------------------------------------////
       // Botón modificar estado
       const botonModificar = document.createElement("button");
       botonModificar.textContent = "Modificar Estado";
       botonModificar.style.marginLeft = "10px";
       botonModificar.style.borderRadius = "15px";
+      botonModificar.style.padding = "5px 10px";
       botonModificar.onclick = () => {
         tareaObj.estado = tareaObj.estado === "Pendiente" ? "Completa" : "Pendiente";
         saveTareas();
         renderTareas();
       };
-  //--------------------------------------------------------------------////
+      //--------------------------------------------------------------------////
       nuevoElemento.appendChild(botonBorrar);
       nuevoElemento.appendChild(botonModificar);
       listaDeTareas.appendChild(nuevoElemento);
@@ -112,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTareas();
   //--------------------------------------------------------------------////
   //LLAMADO A EVENTOS DEL DOM
-  formulario.addEventListener("submit", function (event) { 
+  formulario.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const valor_tarea = tarea.value;
@@ -178,6 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
       botonBorrar.textContent = "Borrar";
       botonBorrar.style.marginLeft = "10px";
       botonBorrar.style.borderRadius = "15px";
+      botonBorrar.style.padding = "5px 10px";
+
       botonBorrar.onclick = () => {
         arrayDeGastos.splice(index, 1);
         saveGastos();
@@ -193,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderGastos();
   //--------------------------------------------------------------------////
   //LLAMADO A EVENTOS DEL DOM
-  formulario_gastos.addEventListener("submit", function (event) { 
+  formulario_gastos.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const valor_gasto = gasto.value;
@@ -266,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
       balance.textContent = "Disponible: $" + totalCuenta;
       saveBalance();
       const fecha = new Date();
-      const textoMovimiento = "Ingresaste: $" + valor_depositado + " - " + fecha.toLocaleDateString() + " - " +  fecha.toLocaleTimeString() + " - Balance a la fecha: $" + totalCuenta;
+      const textoMovimiento = "Ingresaste: $" + valor_depositado + " - " + fecha.toLocaleDateString() + " - " + fecha.toLocaleTimeString() + " - Balance a la fecha: $" + totalCuenta;
       arrayMovimientos.push(textoMovimiento);
       saveMovimientos();
       renderMovimientos();
@@ -295,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
       balance.textContent = "Disponible: $" + totalCuenta;
       saveBalance();
       const fecha = new Date();
-      const textoMovimiento = "Retiraste: $" + valor_retirado + " - " + fecha.toLocaleDateString() + " - " +  fecha.toLocaleTimeString() + " - Balance a la fecha: $" + totalCuenta;
+      const textoMovimiento = "Retiraste: $" + valor_retirado + " - " + fecha.toLocaleDateString() + " - " + fecha.toLocaleTimeString() + " - Balance a la fecha: $" + totalCuenta;
       arrayMovimientos.push(textoMovimiento);
       saveMovimientos();
       renderMovimientos();
