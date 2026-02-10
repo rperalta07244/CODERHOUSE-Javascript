@@ -5,10 +5,13 @@ if (formularioLogIn) {
   const contraseña = document.querySelector('#password');
 
 
+  // tostify---------------------
+
+
 
   //crear login
-  const user = "rperalta07";
-  const passwd = "rperalta07"
+  const user = "rodrigo";
+  const passwd = "123456"
 
   formularioLogIn.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -75,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const nuevoElemento = document.createElement("li");
       nuevoElemento.textContent =
         tareaObj.tarea + " -- Fecha: " + tareaObj.fecha + " -- Estado: " + tareaObj.estado;
+
+
       //--------------------------------------------------------------------////
       // Crear botón de borrar
       const botonBorrar = document.createElement("button");
@@ -86,6 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
         arrayDeTareas.splice(index, 1);
         saveTareas();
         renderTareas();
+        Toastify({
+          text: "Tarea eliminada",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #b01500ff, #d32121ff)",
+          },
+          onClick: function () { } // Callback after click
+        }).showToast();
       };
       //--------------------------------------------------------------------////
       // Botón modificar estado
@@ -98,6 +115,18 @@ document.addEventListener('DOMContentLoaded', () => {
         tareaObj.estado = tareaObj.estado === "Pendiente" ? "Completa" : "Pendiente";
         saveTareas();
         renderTareas();
+        Toastify({
+          text: "Estado modificado",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #277bd4ff, rgba(29, 104, 141, 1)ff)",
+          },
+          onClick: function () { } // Callback after click
+        }).showToast();
       };
       //--------------------------------------------------------------------////
       nuevoElemento.appendChild(botonBorrar);
@@ -127,11 +156,26 @@ document.addEventListener('DOMContentLoaded', () => {
       agregarTareas(valor_tarea, valor_fecha, valor_estado);
       saveTareas();
       renderTareas();
+
+      // Mostrar notificación de tarea agregada
+      Toastify({
+        text: "Tarea agregada",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () { }
+      }).showToast();
+
       // LIMPIAR INPUT
       tarea.value = "";
       tarea.focus();
     } else {
-      alert("DEBE COMPELTAR LOS CAMPOS");
+      alert("DEBE COMPLETAR LOS CAMPOS");
     }
   });
 
@@ -186,6 +230,18 @@ document.addEventListener('DOMContentLoaded', () => {
         arrayDeGastos.splice(index, 1);
         saveGastos();
         renderGastos();
+        Toastify({
+          text: "Gasto eliminado",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "linear-gradient(to right, #b00c00ff, #cd2929ff)",
+          },
+          onClick: function () { }
+        }).showToast();
       };
 
       nuevoElemento.appendChild(botonBorrar);
@@ -210,13 +266,25 @@ document.addEventListener('DOMContentLoaded', () => {
       agregarGastos(valor_gasto, valor_monto, valor_fecha);
       saveGastos();
       renderGastos();
+      Toastify({
+        text: "Gasto agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () { }
+      }).showToast();
 
       // LIMPIAR INPUT
       gasto.value = "";
       monto.value = "";
       gasto.focus();
     } else {
-      alert("DEBE COMPELTAR LOS CAMPOS");
+      alert("DEBE COMPLETAR LOS CAMPOS");
     }
   });
 
