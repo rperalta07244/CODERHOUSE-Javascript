@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Funcionalidad de menús desplegables
-  const collapsibles = document.querySelectorAll('.collapsible');
+  const colapsable = document.querySelectorAll('.colapsable');
 
-  collapsibles.forEach(collapsible => {
-    collapsible.addEventListener('click', function () {
+  colapsable.forEach(colapsable => {
+    colapsable.addEventListener('click', function () {
       const targetId = this.getAttribute('data-target');
       const content = document.getElementById(targetId);
 
@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Abrir todas las secciones por defecto
-  collapsibles.forEach(collapsible => {
-    const targetId = collapsible.getAttribute('data-target');
+  colapsable.forEach(colapsable => {
+    const targetId = colapsable.getAttribute('data-target');
     const content = document.getElementById(targetId);
-    collapsible.classList.add('active');
+    colapsable.classList.add('active');
     content.classList.add('active');
   });
 
@@ -390,6 +390,19 @@ document.addEventListener('DOMContentLoaded', () => {
       saveMovimientos();
       renderMovimientos();
 
+      Toastify({
+        text: "Nuevo Movimiento detectado - Ingreso",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () { }
+      }).showToast();
+
       deposito.value = "";
       deposito.focus();
     } else {
@@ -422,6 +435,19 @@ document.addEventListener('DOMContentLoaded', () => {
       arrayMovimientos.push(textoMovimiento);
       saveMovimientos();
       renderMovimientos();
+
+      Toastify({
+        text: "Nuevo Movimiento detectado - Retiro",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #b00c00ff, #cd2929ff)",
+        },
+        onClick: function () { }
+      }).showToast();
 
       retirado.value = "";
       retirado.focus();

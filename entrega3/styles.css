@@ -232,7 +232,7 @@ select:focus {
     margin-top: 20px;
 }
 
-.collapsible {
+.colapsable {
     cursor: pointer;
     user-select: none;
     display: flex;
@@ -242,13 +242,13 @@ select:focus {
     position: relative;
 }
 
-.collapsible:hover {
+.colapsable:hover {
     background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(25, 118, 210, 0.4);
 }
 
-.collapsible h4 {
+.colapsable h4 {
     flex: 1;
 }
 
@@ -258,11 +258,11 @@ select:focus {
     margin-left: 10px;
 }
 
-.collapsible.active .toggle-icon {
+.colapsable.active .toggle-icon {
     transform: rotate(180deg);
 }
 
-.collapsible-content {
+.colapsable-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
@@ -270,7 +270,7 @@ select:focus {
     margin-bottom: 0;
 }
 
-.collapsible-content.active {
+.colapsable-content.active {
     max-height: 3000px;
     opacity: 1;
     margin-bottom: 20px;
