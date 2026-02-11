@@ -4,11 +4,6 @@ if (formularioLogIn) {
   const user_name = document.querySelector('#username');
   const contraseña = document.querySelector('#password');
 
-
-  // tostify---------------------
-
-
-
   //crear login
   const user = "rodrigo";
   const passwd = "123456"
@@ -16,9 +11,31 @@ if (formularioLogIn) {
   formularioLogIn.addEventListener('submit', (event) => {
     event.preventDefault();
     if (user_name.value === user && contraseña.value === passwd) {
-      window.location.href = 'main.html';
+      let timerInterval;
+      Swal.fire({
+        title: "Ingresando a la App...",
+        html: "Aguarde unos momentos...",
+        timer: 1500,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const timer = Swal.getPopup().querySelector("b");
+          timerInterval = setInterval(() => {
+            timer.textContent = `${Swal.getTimerLeft()}`;
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        }
+      }).then((result) => {
+        window.location.href = 'main.html';
+      });
     } else {
-      alert("Ingrese un Usuario y/o Contraseña validos");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Ingrese un Usuario y/o Contraseña validos",
+      });
     }
   });
 }
@@ -175,7 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
       tarea.value = "";
       tarea.focus();
     } else {
-      alert("DEBE COMPLETAR LOS CAMPOS");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Debe completar todos los campos",
+      });
     }
   });
 
@@ -284,7 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
       monto.value = "";
       gasto.focus();
     } else {
-      alert("DEBE COMPLETAR LOS CAMPOS");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Debe completar todos los campos",
+      });
     }
   });
 
@@ -346,7 +371,11 @@ document.addEventListener('DOMContentLoaded', () => {
       deposito.value = "";
       deposito.focus();
     } else {
-      alert("INGRESE UN MONTO VALIDO!");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Ingrese un monto valido",
+      });
     }
   });
 
@@ -375,7 +404,11 @@ document.addEventListener('DOMContentLoaded', () => {
       retirado.value = "";
       retirado.focus();
     } else {
-      alert("INGRESE UN MONTO VALIDO! // ASEGURESE DE TENER DINERO EN SU CUENTA");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Ingrese un monto valido // Asegurese de tener dinero en su cuenta",
+      });
     }
   });
 });
