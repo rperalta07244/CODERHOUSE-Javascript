@@ -52,6 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Funcionalidad de menús desplegables
+  const collapsibles = document.querySelectorAll('.collapsible');
+
+  collapsibles.forEach(collapsible => {
+    collapsible.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-target');
+      const content = document.getElementById(targetId);
+
+      // Toggle active class
+      this.classList.toggle('active');
+      content.classList.toggle('active');
+    });
+  });
+
+  // Abrir todas las secciones por defecto
+  collapsibles.forEach(collapsible => {
+    const targetId = collapsible.getAttribute('data-target');
+    const content = document.getElementById(targetId);
+    collapsible.classList.add('active');
+    content.classList.add('active');
+  });
+
   //CREACION DEL ARRAY
   const arrayDeTareas = [];
   //--------------------------------------------------------------------////
