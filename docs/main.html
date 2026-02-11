@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Companion - ultima mod 7/2/26</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+
+    <div class="titulo">
+        <H1>Daily Companion</H1>
+        <button id="cerrar_sesion" class="estilo_boton">Cerrar Sesión</button>
+    </div>
+
+    <div class="contenedor">
+
+        <!-- SECCION DE TAREAS -->
+        <div class="subtitulo colapsable" data-target="seccion_tareas">
+            <h4>Tareas</h4>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div id="seccion_tareas" class="colapsable-content">
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Agregar Tareas</h5>
+                <div id="contenedor_tareas">
+                    <form class="form" id="formulario_tareas">
+                        <input id="tarea" type="text" placeholder="Ingrese la tarea">
+                        <input id="fecha" type="date">
+                        <select name="Estado" id="estado">
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="Completa">Completa</option>
+                        </select>
+                        <input class="estilo_boton" type="submit" value="Agregar tarea">
+                    </form>
+                </div>
+            </div>
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Tareas Agregadas</h5>
+                <div id="tareas_agregadas">
+                    <ul id="lista_tareas"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCION DE GASTOS -->
+        <div class="subtitulo colapsable" data-target="seccion_gastos">
+            <h4> Gastos</h4>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div id="seccion_gastos" class="colapsable-content">
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Agregar Gastos</h5>
+                <div id="contenedor_gastos">
+                    <form class="form" id="formulario_gastos">
+                        <input id="gasto" type="text" placeholder="Ingrese el item">
+                        <input id="monto" type="number" placeholder="Monto">
+                        <input id="fecha_compra" type="date">
+                        <input class="estilo_boton" type="submit" value="Agregar gasto">
+                    </form>
+                </div>
+            </div>
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Listado de Gastos</h5>
+                <div id="gastos_agregados">
+                    <ul id="lista_gastos"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCION BALANCE -->
+        <div class="subtitulo colapsable" data-target="seccion_balance">
+            <h4>Balance</h4>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div id="seccion_balance" class="colapsable-content">
+            <div class="subseccion">
+                <div id="contenedor_balance">
+                    <span id="balance">-</span>
+                </div>
+            </div>
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Depositar</h5>
+                <div id="ingreso">
+                    <form id="formulario_ingreso">
+                        <input id="depositado" type="number" placeholder="Monto a depositar">
+                        <input class="estilo_boton" type="submit" value="Depositar">
+                    </form>
+                </div>
+            </div>
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Retirar</h5>
+                <div id="egreso">
+                    <form id="formulario_egreso">
+                        <input id="retirado" type="number" placeholder="Monto a retirar">
+                        <input class="estilo_boton" type="submit" value="Retirar">
+                    </form>
+                </div>
+            </div>
+            <div class="subseccion">
+                <h5 class="subseccion-titulo">Historial de Movimientos</h5>
+                <div id="mov">
+                    <ol id="movimientos"></ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Daily Companion. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://github.com/rperalta07244/CODERHOUSE-Javascript" target="_blank" title="GitHub Repository">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/rodrigo-miguel-peralta-azurmendi-a86705187/?skipRedirect=true"
+                target="_blank" title="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./entrega3.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
