@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderMovimientos();
 
       Toastify({
-        text: "Nuevo Movimiento detectado - Ingreso",
+        text: "Nuevo movimiento detectado - Ingreso",
         duration: 3000,
         close: true,
         gravity: "top",
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderMovimientos();
 
       Toastify({
-        text: "Nuevo Movimiento detectado - Retiro",
+        text: "Nuevo movimiento detectado - Retiro",
         duration: 3000,
         close: true,
         gravity: "top",
